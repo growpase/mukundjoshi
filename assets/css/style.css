@@ -1241,7 +1241,7 @@ footer a.text-white-50:hover {
   height: 5px;
   bottom: -1px;
   left: 50%;
-  background: var(--default-color);
+  background: var(--dark);
   transition: 0.5s;
 }
 
@@ -1282,4 +1282,6 @@ footer a.text-white-50:hover {
   }
 }
 
-
+.contact-with-area .d-flex a.text-white-50:hover{
+  color: var(--primary) !important;
+}

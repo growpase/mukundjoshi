@@ -554,7 +554,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, #000, transparent 10%);
+  background: color-mix(in srgb, #000, transparent 15%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1413,6 +1413,7 @@ section,
 .section-tittle,
 .front-text {
   position: relative;
+  z-index: 1;
 }
 
 .cta-btn {
@@ -1441,4 +1442,8 @@ section,
 .cta-btn:hover::after {
   width: 50%;
   left: 25%;
+}
+
+.contact-with-area .d-flex a.text-white-50:hover{
+  color: var(--primary) !important;
 }
