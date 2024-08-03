@@ -42,16 +42,16 @@
   });
 
   // Portfolio isotope and filter
-  var portfolioIsotope = $(".portfolio-container").isotope({
-    itemSelector: ".portfolio-item",
-    layoutMode: "fitRows",
-  });
-  $("#portfolio-flters li").on("click", function () {
-    $("#portfolio-flters li").removeClass("active");
-    $(this).addClass("active");
+  // var portfolioIsotope = $(".portfolio-container").isotope({
+  //   itemSelector: ".portfolio-item",
+  //   layoutMode: "fitRows",
+  // });
+  // $("#portfolio-flters li").on("click", function () {
+  //   $("#portfolio-flters li").removeClass("active");
+  //   $(this).addClass("active");
 
-    portfolioIsotope.isotope({ filter: $(this).data("filter") });
-  });
+  //   portfolioIsotope.isotope({ filter: $(this).data("filter") });
+  // });
 
   // Testimonials carousel
   $(".testimonial-carousel").owlCarousel({
@@ -63,10 +63,8 @@
   });
 })(jQuery);
 
-
-
 (function () {
-  "use strict";
+  ("use strict");
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -126,12 +124,12 @@
   /**
    * Preloader
    */
-  const preloader = document.querySelector("#preloader");
-  if (preloader) {
-    window.addEventListener("load", () => {
-      preloader.remove();
-    });
-  }
+  // const preloader = document.querySelector("#preloader");
+  // if (preloader) {
+  //   window.addEventListener("load", () => {
+  //     preloader.remove();
+  //   });
+  // }
 
   /**
    * Scroll top button

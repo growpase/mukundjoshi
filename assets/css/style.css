@@ -1047,6 +1047,11 @@ footer a.text-white-50:hover {
 .section-tittle,
 .front-text {
   position: relative;
+  z-index: 1;
+}
+
+.py-6.px-5 .container{
+  padding: 0;
 }
 
 /***** modal popup *****/
@@ -1140,7 +1145,7 @@ footer a.text-white-50:hover {
   display: inline-block;
 }
 .modal-body.img{
-    background: url(../images/RDS09405-2.jpg) center center no-repeat;
+    background: url(../images/mj-3.jpg) center center no-repeat;
     background-size: cover;
 }
 @media (max-width: 767.98px) {
@@ -1223,8 +1228,32 @@ footer a.text-white-50:hover {
   border-color: #cb191e;
 }
 
-.cta-btn{
+.cta-btn {
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 5px;
+  position: relative;
+}
+
+.cta-btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 5px;
+  bottom: -1px;
+  left: 50%;
+  background: var(--default-color);
+  transition: 0.5s;
+}
+
+.cta-btn:hover {
+  color: #fff !important;
+  background-color: #cb191e;
+  border-color: #cb191e !important;
+}
+
+.cta-btn:hover::after {
+  width: 50%;
+  left: 25%;
 }
 
 @media (max-width: 767.98px) {
@@ -1244,8 +1273,8 @@ footer a.text-white-50:hover {
   .border-between::after{
     display: none;
   }
-  .section-tittle span.back-text{
-    font-size: 90px;
+  .section-tittle.section-tittle4 span.back-text{
+    font-size: 70px;
     transform: translateY(-130%);
   }
   .border-between::after {

@@ -7,22 +7,34 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #000; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0e1b4d; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ec1f25; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #000;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #0e1b4d;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #ec1f25;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.65);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #f82249; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(255, 255, 255, 0.65);
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #f82249;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
   --primary: #ec1f25;
   --secondary: #fdbe33;
   --light: #f4f6f8;
@@ -68,14 +80,17 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2,
+h1,
+h2,
 h3,
 h4,
-h5, h6{
+h5,
+h6 {
   color: #000;
   font-family: var(--heading-font);
 }
-p{
+
+p {
   font-size: 18px;
 }
 
@@ -309,8 +324,7 @@ p{
   }
 } */
 
-
-header{
+header {
   position: absolute;
   left: 0;
   right: 0;
@@ -345,16 +359,18 @@ footer .navbar-brand {
   padding: 0;
 }
 
-.btn-primary{
+.btn-primary {
   padding: 1rem 1.5rem !important;
   color: var(--light);
   border-radius: 5px;
   text-transform: capitalize;
   position: relative;
 }
-.about .about-div .btn-primary i{
+
+.about .about-div .btn-primary i {
   color: var(--light);
 }
+
 .btn-primary::after {
   position: absolute;
   content: "";
@@ -449,7 +465,8 @@ footer .navbar-brand {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
-  .d-xs-none{
+
+  .d-xs-none {
     display: none;
   }
 }
@@ -471,7 +488,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 76px;
@@ -621,49 +637,229 @@ section,
 /*--------------------------------------------------------------
 # Curriculum Section
 --------------------------------------------------------------*/
-.curriculum-row{
+.curriculum-row {
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
 }
-.course-item{
+
+.course-item {
   padding: 2rem 1.5rem;
   background-color: var(--contrast-color);
   border-right: 1px solid rgba(0, 0, 0, 0.07);
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
-.author-img {
+
+.about-me, .professional-section, .services, .maps{
+  position: relative;
+}
+.about-me::after {
+  position: absolute;
+  z-index: 1;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 45%, rgba(0,0,0,0.2) 100%), url(../images/concert.webp);
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.professional-section::after{
+  position: absolute;
+  z-index: 1;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 70%, rgba(255,255,255,0.6) 100%), url(../images/carousel-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  height: 100%;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.maps::after{
+  position: absolute;
+  z-index: 1;
+  background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.9) 100%), url(../images/book-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  height: 100%;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.services::after{
+  position: absolute;
+  z-index: 1;
+  background: url(../images/crowd.webp) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.author-img{
   position: absolute;
   left: -60px;
   bottom: 0;
   top: 21px;
 }
+
 .author-img img {
   width: 640px;
   transform: rotateY(180deg);
 }
-.font-normal{
+
+.layer > .container {
+  position: relative;
+  z-index: 3;
+}
+
+.font-normal {
   font-weight: normal;
 }
+
 .book-p {
   font-size: 18px;
   position: relative;
   padding: 0 0 0 35px;
 }
+
 .book-p i {
   position: absolute;
   left: 0;
   top: 5px;
 }
-.blank-book{
+
+.blank-book {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .blank-book img {
   position: relative;
   z-index: 2;
   border-radius: 10px;
   width: 90%;
   max-height: 500px;
+}
+
+/***** modal popup *****/
+
+.modal-dialog {
+  max-width: 950px;
+}
+
+.modal-content {
+  border: none;
+  position: relative;
+  padding: 0 !important;
+  font-size: 14px;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+.modal-content .modal-header {
+  padding: 0;
+  border: none;
+}
+.modal-content button.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  text-shadow: none;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.modal-content .modal-body {
+  border: none;
+  position: relative;
+  z-index: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.modal-content .modal-body.color-1 {
+  background: #ec1f25;
+}
+.modal-content .modal-body .subheading {
+  font-weight: 700;
+}
+.modal-content .modal-body .heading {
+  font-weight: 700;
+}
+.modal-content .modal-body a:hover {
+  color: #afa939;
+}
+.modal-content .label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.modal-content .form-control {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 0;
+  color: rgba(255, 255, 255, 0.7) !important;
+  padding: 0 15px;
+  height: 52px;
+}
+.modal-content textarea.form-control {
+    height: auto !important;
+  }
+.modal-content .form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+.modal-content .form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+.modal-content .form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+.modal-content .form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+.modal-content textarea {
+  padding: 20px 15px !important;
+}
+.modal-content .btn-secondary {
+  height: 52px;
+  display: inline-block;
+}
+.modal-body.img{
+    background: url(../images/mj-3.jpg) center center no-repeat;
+    background-size: cover;
+}
+@media (max-width: 767.98px) {
+  .modal-content .img {
+    height: 300px;
+    background-position: top center;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -716,8 +912,8 @@ section,
   }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -728,13 +924,13 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -743,7 +939,7 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -755,14 +951,12 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 
-
-
 /*--------------------------------------------------------------
 # Course Timeline Section
 --------------------------------------------------------------*/
 
 .main-timeline {
-  position: relative
+  position: relative;
 }
 
 .main-timeline:before {
@@ -775,18 +969,18 @@ section,
   position: absolute;
   top: 0;
   left: 0;
-  right: 0
+  right: 0;
 }
 
 .main-timeline .timeline {
   margin-bottom: 40px;
-  position: relative
+  position: relative;
 }
 
 .main-timeline .timeline:after {
   content: "";
   display: block;
-  clear: both
+  clear: both;
 }
 
 .main-timeline .icon {
@@ -798,7 +992,7 @@ section,
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0
+  right: 0;
 }
 
 .main-timeline .icon:before,
@@ -810,33 +1004,33 @@ section,
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.33s ease-out 0s
+  transition: all 0.33s ease-out 0s;
 }
 
 .main-timeline .icon:before {
   background: #fff;
   border: 2px solid #232323;
-  left: -3px
+  left: -3px;
 }
 
 .main-timeline .icon:after {
   border: 2px solid #c6c6c6;
-  left: 3px
+  left: 3px;
 }
 
 .main-timeline .timeline:hover .icon:before {
-  left: 3px
+  left: 3px;
 }
 
 .main-timeline .timeline:hover .icon:after {
-  left: -3px
+  left: -3px;
 }
 
 .main-timeline .date-content {
   width: 50%;
   float: left;
   margin-top: 22px;
-  position: relative
+  position: relative;
 }
 
 .main-timeline .date-content:before {
@@ -848,7 +1042,7 @@ section,
   position: absolute;
   top: 0;
   right: 10px;
-  bottom: 0
+  bottom: 0;
 }
 
 .main-timeline .date-outer {
@@ -857,7 +1051,7 @@ section,
   font-size: 16px;
   text-align: center;
   margin: auto;
-  z-index: 1
+  z-index: 1;
 }
 
 .main-timeline .date-outer:before,
@@ -871,26 +1065,26 @@ section,
   top: 0;
   left: 0;
   right: 0;
-  transition: all 0.33s ease-out 0s
+  transition: all 0.33s ease-out 0s;
 }
 
 .main-timeline .date-outer:before {
   background: #fff;
   border: 2px solid #232323;
-  left: -6px
+  left: -6px;
 }
 
 .main-timeline .date-outer:after {
   border: 2px solid #c6c6c6;
-  left: 6px
+  left: 6px;
 }
 
 .main-timeline .timeline:hover .date-outer:before {
-  left: 6px
+  left: 6px;
 }
 
 .main-timeline .timeline:hover .date-outer:after {
-  left: -6px
+  left: -6px;
 }
 
 .main-timeline .date {
@@ -898,12 +1092,12 @@ section,
   margin: auto;
   position: absolute;
   top: 27%;
-  left: 0
+  left: 0;
 }
 
 .main-timeline .month {
   font-size: 18px;
-  font-weight: 700
+  font-weight: 700;
 }
 
 .main-timeline .year {
@@ -911,71 +1105,80 @@ section,
   font-size: 30px;
   font-weight: 700;
   color: #232323;
-  line-height: 36px
+  line-height: 36px;
 }
 
 .main-timeline .timeline-content {
   width: 50%;
   padding: 20px 0 20px 50px;
-  float: right
+  float: right;
 }
 
 .main-timeline .title {
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
-  margin: 0 0 15px 0
+  margin: 0 0 15px 0;
 }
 
 .main-timeline .timeline:nth-child(2n) .date-content {
-  float: right
+  float: right;
 }
 
 .main-timeline .timeline:nth-child(2n) .date-content:before {
-  left: 10px
+  left: 10px;
 }
 
 .main-timeline .timeline:nth-child(2n) .timeline-content {
   padding: 20px 50px 20px 0;
-  text-align: right
+  text-align: right;
 }
 
 @media only screen and (max-width: 991px) {
   .main-timeline .date-content {
-      margin-top: 35px
+    margin-top: 35px;
   }
+
   .main-timeline .date-content:before {
-      width: 22.5%
+    width: 22.5%;
   }
+
   .main-timeline .timeline-content {
-      padding: 10px 0 10px 30px
+    padding: 10px 0 10px 30px;
   }
+
   .main-timeline .title {
-      font-size: 17px
+    font-size: 17px;
   }
+
   .main-timeline .timeline:nth-child(2n) .timeline-content {
-      padding: 10px 30px 10px 0
+    padding: 10px 30px 10px 0;
   }
+
   .navbar-dark .navbar-toggler {
     color: #fff;
     padding: 0;
     font-size: 30px;
     border: none;
   }
+
   .navbar-dark .navbar-toggler-icon {
     background: none;
     width: auto;
     height: auto;
   }
+
   .navbar-brand {
     padding: 0;
   }
+
   .navbar-collapse {
     margin: 15px 0;
     border-top: 1px solid #ccc;
     background-color: #000;
     padding: 10px 20px 20px;
   }
+
   .navbar-dark .navbar-nav .nav-link {
     margin-left: 0;
     padding: 10px 0;
@@ -984,62 +1187,72 @@ section,
 
 @media only screen and (max-width: 767px) {
   .main-timeline:before {
-      margin: 0;
-      left: 7px
+    margin: 0;
+    left: 7px;
   }
+
   .main-timeline .timeline {
-      margin-bottom: 20px
+    margin-bottom: 20px;
   }
+
   .main-timeline .timeline:last-child {
-      margin-bottom: 0
+    margin-bottom: 0;
   }
+
   .main-timeline .icon {
-      margin: auto 0
+    margin: auto 0;
   }
+
   .main-timeline .date-content {
-      width: 95%;
-      float: right;
-      margin-top: 0
+    width: 95%;
+    float: right;
+    margin-top: 0;
   }
+
   .main-timeline .date-content:before {
-      display: none
+    display: none;
   }
+
   .main-timeline .date-outer {
-      width: 110px;
-      height: 110px
+    width: 110px;
+    height: 110px;
   }
+
   .main-timeline .date-outer:before,
   .main-timeline .date-outer:after {
-      width: 110px;
-      height: 110px
+    width: 110px;
+    height: 110px;
   }
+
   .main-timeline .date {
-      top: 30%
+    top: 30%;
   }
+
   .main-timeline .year {
-      font-size: 24px
+    font-size: 24px;
   }
+
   .main-timeline .timeline-content,
   .main-timeline .timeline:nth-child(2n) .timeline-content {
-      width: 95%;
-      text-align: center;
-      padding: 10px 0
+    width: 95%;
+    text-align: center;
+    padding: 10px 0;
   }
+
   .main-timeline .title {
-      margin-bottom: 10px
+    margin-bottom: 10px;
   }
 }
 
-
-.list-right{
+.list-right {
   padding: 0 0 0 15px;
 }
 
-.list-right li{
+.list-right li {
   padding: 0 0 10px;
 }
 
-.line-height{
+.line-height {
   line-height: 40px;
 }
 
@@ -1086,7 +1299,6 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
-
 
 /*--------------------------------------------------------------
 # Featured Services Section
@@ -1137,8 +1349,6 @@ section,
   color: var(--accent-color);
 }
 
-
-
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -1149,21 +1359,25 @@ section,
   background-repeat: no-repeat;
   background: url(../images/section-bg2.jpg) 0 0;
 }
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .contact-with-area {
     padding: 70px 15px 50px 15px;
   }
 }
+
 @media (max-width: 575px) {
   .contact-with-area {
     padding: 70px 15px 50px 15px;
   }
 }
+
 .contact-with-area .contact-us-caption p {
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .section-tittle span.back-text {
   font-size: 120px;
   font-weight: 800;
@@ -1177,6 +1391,7 @@ section,
   right: 0;
   left: 12px;
 }
+
 .section-tittle.section-tittle4 span.back-text {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
   transform: translateY(-113%);
@@ -1189,6 +1404,7 @@ section,
   line-height: 1.2;
   text-transform: uppercase;
 }
+
 .section-tittle.section-tittle4 .front-text h2 {
   font-size: 50px;
   color: #fff;
@@ -1199,4 +1415,30 @@ section,
   position: relative;
 }
 
+.cta-btn {
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 5px;
+  position: relative;
+}
 
+.cta-btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 5px;
+  bottom: -1px;
+  left: 50%;
+  background: var(--default-color);
+  transition: 0.5s;
+}
+
+.cta-btn:hover {
+  color: #fff !important;
+  background-color: #cb191e;
+  border-color: #cb191e !important;
+}
+
+.cta-btn:hover::after {
+  width: 50%;
+  left: 25%;
+}
