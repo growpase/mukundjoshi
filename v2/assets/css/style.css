@@ -981,7 +981,7 @@ footer a.text-white-50:hover {
   right: 0;
   top: 0;
 }
-.books-section .layer::after {
+.books-section-inner .layer::after {
   background-color: #000;
   opacity: 0.7;
   content: "";
